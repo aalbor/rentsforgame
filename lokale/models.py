@@ -9,14 +9,11 @@ from django.contrib.contenttypes import generic
 class Juego(models.Model):
     id = models.AutoField(primary_key=True)
     prop = models.ForeignKey('lokale.Client', blank=True, null=True)
-    adres = models.CharField('Adres', max_length=50)
-    miasto = models.CharField('Miasto', max_length=30)
-    licz_pokoi = models.IntegerField('Liczba pokoi')
     cena = models.DecimalField('Precio', max_digits=10, decimal_places=2)
-    data_wyp = models.DateField('Data wypozyczenia', blank=True, null=True)
-    data_odd = models.DateField('Data oddania', blank=True, null=True)
-    opis = models.CharField('Opis', max_length=300)
-    zdj_link = models.CharField('Link do zdjecia', max_length=200)
+    data_wyp = models.DateField('Data renta', blank=True, null=True)
+    data_odd = models.DateField('Data entrega', blank=True, null=True)
+    opis = models.CharField('Descripcion', max_length=300)
+    zdj_link = models.CharField('Link de imagenes', max_length=200)
     def __unicode__(self):
         return str(self.adres) + ' ' + str(self.miasto)
 
