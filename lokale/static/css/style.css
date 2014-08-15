@@ -1,8 +1,7 @@
 @import url('reset.css');
 @import url('../css/fonts/stylesheet.css');
-
 * {
-	font-family: quicksandlight;
+ 	font-family: quicksandlight;
 }
 
 body
@@ -283,7 +282,7 @@ a {
 	margin-top: 50px;
 	font-size: 75px;
 	text-align: center;
-	color: #333333;
+	color: #6D929B;
 }
 
 #cars_top
@@ -366,14 +365,3 @@ li {
 	padding: 2px;
 }
 
-#accept_offer, #decline_offer {
-	font-size: 18px;
-}
-
-#accept_offer {
-	color: green;
-}
-
-#decline_offer {
-	color: red;
-}
