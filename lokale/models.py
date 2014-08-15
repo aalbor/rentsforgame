@@ -3,7 +3,6 @@ from django.core.validators import RegexValidator
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes import generic
 
-
 # Create your models here.
 
 class Juego(models.Model):
@@ -34,9 +33,9 @@ class Protocolo(models.Model):
     id = models.AutoField(primary_key=True)
     lokal_id = models.ForeignKey('lokale.Juego')
     wlasciciel_id = models.ForeignKey('lokale.Client', related_name='wlasciciel_mieszkania')
-    klient_id = models.ForeignKey('lokale.Client', related_name='klient_mieszkania')
-    cena = models.DecimalField('Cena',max_digits = 10, decimal_places = 2)
-    ilosc = models.IntegerField('Ilosc dni')
+    Client_id = models.ForeignKey('lokale.Client', related_name='Client_mieszkania')
+    cena = models.DecimalField('Precio',max_digits = 10, decimal_places = 2)
+    ilosc = models.IntegerField('Cantidad')
     data = models.DateField('Data')
     def __unicode__(self):
         return str(self.id) + ' ' + str(self.lokal_id) + ' ' + str(wlasciciel_id) + ' ' + str(self.klient_id)

@@ -38,8 +38,8 @@ def view_profile(request):
         return HttpResponseRedirect('/register_success')
     req_user = request.user.username
     cur_user = Client.objects.get(nick=req_user)
-    client_entries = Protokol.objects.filter(klient_id = cur_user)
-    owner_entries = Protokol.objects.filter(wlasciciel_id = cur_user)
+    client_entries = Protocolo.objects.filter(klient_id = cur_user)
+    owner_entries = Protocolo.objects.filter(wlasciciel_id = cur_user)
     c ={'page':'view_profile.html', 'user':request.user,'owner_entry':owner_entries,'client_entry':client_entries}
     c.update(csrf(request))
     return HttpResponse(render_to_response('index.html',c))
