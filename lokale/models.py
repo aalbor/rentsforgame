@@ -14,10 +14,10 @@ class Juego(models.Model):
     opis = models.CharField('Descripcion', max_length=300)
     zdj_link = models.CharField('Link de imagenes', max_length=200)
     def __unicode__(self):
-        return str(self.adres) + ' ' + str(self.miasto)
+        return str(self.opis) + ' ' + str(self.cena)
 
     def __str__(self):
-        return str(self.adres) + ' ' + str(self.miasto)
+        return str(self.opis) + ' ' + str(self.cena)
 
 class Client(models.Model):
     id = models.AutoField(primary_key=True)
