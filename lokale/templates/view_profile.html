@@ -1,0 +1,26 @@
+<div id="edit_profile">
+<form action="../view_profile/" method="post"> 
+{% csrf_token %}
+		<div id = "fields">
+			 <input class="short" type="text" name="login" placeholder="Usuario" required disabled>
+			  <input class="short" type="password" name="haslo" placeholder="Contrasenia" required>
+			  <input class="long" type="email" name="email" placeholder="Correo" required>
+		</div>
+	<input id="save" type="submit" value="guardar">
+</form>
+</div>
+<div id="profile_lists">
+	<div id="as_owner">
+		<h1>Opcion de juego</h1>
+			<ul id="place_list">
+		
+			</ul>
+	</div>
+
+	<div id="as_client">
+		<h1>Opcion de juego</h1>
+			<ul id="place_list">
+		
+			</ul>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+<div id="login_div">
+	{% if form.errors %}
+	<p class="error">Nombre de usuario o contrasenia incorrecto</p>
+	{% endif %}
+	<form action="../auth/" method="post">
+	 {% csrf_token %}
+		<input id="login_input" type="text" name ="username" placeholder="Nombre de usuario" value='' required>
+		<input id="pass_input" type="password" name = "password"  placeholder="Contrasenia" value='' required>
+		<input  id="login" type="submit" value="Iniciar Sesion">
+	</form>
+</div>
+

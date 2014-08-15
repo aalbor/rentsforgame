@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>VideoJuegos</title>
+
+	<!-- inside sources -->
+	<link type="text/css" rel="stylesheet" href="../static/css/reset.css"> 
+	<link type="text/css" rel="stylesheet" href="../static/css/style.css"> 
+	<script type="text/javascript" src="../static/scripts/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../static/scripts/script-maps.js"></script>
+	<script type="text/javascript" src="../static/scripts/script.js"></script>
+</head>
+
+<body>	
+	<header id="head">
+		<div id="logo">
+		<a href="../main" style="color: white"><p>VideoJuegos</p></a>
+		</div>
+		<div id="menu"> 
+			<a href="../view_profile">{{ user.username }}</a> |
+			<a href="../logout_me">Salir</a> |
+			<a href="../login">Login</a> |
+			<a href="../register">Registrarse</a> 
+		</div>
+	</header>
+	<section id='main_page'>
+			<div id="main_div">
+				{% include page %}			
+			</div>
+	</section>
+	<footer id="foot"></footer>
+</body>
+</html>
