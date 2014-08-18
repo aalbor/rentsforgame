@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.models import User  #tutaj dac klient i firma jakos
+from django. 
 from django.contrib.auth.forms import UserCreationForm
 from lokale.models import Client
 
